@@ -3,6 +3,8 @@ from flask import Flask
 
 def create_app():
     app = Flask(__name__)
+
+    # config.from.mapping permite establecer variables de la app
     app.config.from_mapping(
         SECRET_KEY = 'naja',
         DATABASE_HOST = os.environ.get('FLASK_DATABASE_HOST'),
